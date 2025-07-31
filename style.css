@@ -109,11 +109,36 @@ main::after {
   justify-content: center;
   transition: 0.3s;
   padding: 10px;
+  position: relative;
 }
 
 .qr-contact a {
   text-decoration: none;
 }
+
+.qr-contact .card.soon{
+  pointer-events: none;
+}
+
+.qr-contact .card.soon .soon-label {
+      position: absolute;
+    width: fit-content;
+    padding: 0px 21px;
+    background-color: white;
+    color: #028afb;
+    top: 15px;
+    right: 6px;
+    z-index: 20;
+    margin: 0;
+    line-height: 2;
+    transform: rotate(28deg);
+    border-radius: 15px;
+
+  
+}
+
+
+
 
 .qr-contact .card p {
   margin: 0;
@@ -150,6 +175,21 @@ main::after {
   .qr .qr-header p {
     font-size: 16px;
     text-align: center;
+  }
+
+  .qr-contact .card.soon .soon-label {
+    position: absolute;
+    width: fit-content;
+    padding: 0px 12px;
+    background-color: white;
+    color: #028afb;
+    top: 8px;
+    right: 4px;
+    z-index: 20;
+    margin: 0;
+    line-height: 2;
+    transform: rotate(28deg);
+    border-radius: 15px;
   }
 }
 
