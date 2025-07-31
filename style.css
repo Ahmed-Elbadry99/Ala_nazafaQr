@@ -1,0 +1,150 @@
+body {
+  background: linear-gradient(to top, #16adfe, #0997fc, #028afb);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "font_main";
+}
+
+@font-face {
+  font-family: "font_main";
+  src: url("./Asm\ Font.otf");
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+main::after{
+
+        content: "";
+    background-image: url(./images/bubb.png);
+    background-repeat: repeat;
+    background-position: 0;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50000px;
+    z-index: 1;
+    animation: moveTop 450s linear infinite;
+    
+}
+
+@keyframes moveTop{
+    0% {
+    background-position-y: 0;
+}
+100% {
+    background-position-y: -100%;
+}
+}
+
+.qr {
+  width: 650px;
+  height: 500px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.qr .qr-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr .qr-header .logo {
+  width: 90px;
+  height: 100px;
+}
+
+.qr .qr-header .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.qr .qr-header p {
+  margin: 0;
+  color: #1e9bd6;
+  font-size: 18px;
+}
+.qr .qr-header ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.qr-contact .content-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.qr-contact .card {
+  width: 160px;
+  height: 150px;
+  background: linear-gradient(to top, #16adfe, #0997fc, #028afb);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.qr-contact a {
+  text-decoration: none;
+}
+
+.qr-contact .card p {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+.qr-contact .card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .qr {
+    width: 90%;
+    height: auto;
+    padding: 25px 10px;
+  }
+
+  .qr-contact .card {
+    width: 120px;
+    height: 105px;
+  }
+
+  .qr-contact .card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .qr-contact .card p,
+  .qr .qr-header p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
