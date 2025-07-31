@@ -5,6 +5,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "font_main";
+  direction: rtl;
 }
 
 @font-face {
@@ -21,30 +22,28 @@ main {
   overflow: hidden;
 }
 
-main::after{
-
-        content: "";
-    background-image: url(./images/bubb.png);
-    background-repeat: repeat;
-    background-position: 0;
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50000px;
-    z-index: 1;
-    animation: moveTop 450s linear infinite;
-    
+main::after {
+  content: "";
+  background-image: url(./images/bubb.png);
+  background-repeat: repeat;
+  background-position: 0;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50000px;
+  z-index: 1;
+  animation: moveTop 450s linear infinite;
 }
 
-@keyframes moveTop{
-    0% {
+@keyframes moveTop {
+  0% {
     background-position-y: 0;
-}
-100% {
+  }
+  100% {
     background-position-y: -100%;
-}
+  }
 }
 
 .qr {
@@ -109,6 +108,7 @@ main::after{
   align-items: center;
   justify-content: center;
   transition: 0.3s;
+  padding: 10px;
 }
 
 .qr-contact a {
@@ -137,14 +137,34 @@ main::after{
     height: 105px;
   }
 
-  .qr-contact .card img {
+  .qr-contact .card-img {
     width: 40px;
     height: 40px;
+  }
+  .qr-contact .card-img img {
+    width: 100%;
+    height: 100%;
   }
 
   .qr-contact .card p,
   .qr .qr-header p {
     font-size: 16px;
     text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .qr-contact .card {
+    width: 100px;
+    height: 85px;
+  }
+
+  .qr-contact .card-img {
+    width: 35px;
+    height: 35px;
+  }
+  .qr-contact .card-img img {
+    width: 100%;
+    height: 100%;
   }
 }
