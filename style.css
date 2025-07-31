@@ -127,7 +127,7 @@ main::after{
 
 @media (max-width: 768px) {
   .qr {
-    width: 90%;
+    width: 80%;
     height: auto;
     padding: 25px 10px;
   }
